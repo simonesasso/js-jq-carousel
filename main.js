@@ -60,6 +60,7 @@ $(document).ready(function(){
        ballActive.prev().addClass('active');
      }
     }
+    // NAVIGAZIONE TRAMITE I PALLINI-------------
    $(".nav i").click(
      navPallini
    );
@@ -80,7 +81,14 @@ $(document).ready(function(){
       $('.images img.last').siblings().removeClass('active');
     }
 
-
-
   }
+  // SLIDE QUANDO PREMO LE FRECCINE----------------------
+  $(document).keydown(function(event){
+    var tastoPremuto = event.which;
+    if (tastoPremuto == 39) {
+      nextImg();
+    }else if (tastoPremuto == 37) {
+      prevImg();
+    }
+  });
 })
