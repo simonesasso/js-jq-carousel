@@ -97,6 +97,8 @@ $(document).ready(function(){
     navPallini
   );
   function navPallini() {
+    // in alternativa
+    // var palIndex = $(this).index();
     var palIndex = $(".nav i").index(this);
     $( ".images img" ).eq(palIndex).siblings().removeClass("active");
     $( ".images img" ).eq(palIndex).addClass("active");
